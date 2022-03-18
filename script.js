@@ -1,8 +1,9 @@
+const API = "https://chatback.skolotajainta.repl.co"
 let zina = document.getElementById('zina');
 let zinas = document.querySelector('.logs');
 
 async function IELADET_CATA_ZINAS(){
-  let datiNoServera = await fetch('messages.json');
+  let datiNoServera = await fetch(API+'/lasit');
   let dati = await datiNoServera.json();
   let teksts="";
   for(let i=0;i<dati.length;i++){
